@@ -162,6 +162,10 @@ $(RUNSIM):
 	@echo "Installing runsim..."
 	@(cd /tmp && go get github.com/cosmos/tools/cmd/runsim@v1.0.0)
 
+proto-gen:
+	@echo "Generating Protobuf files"
+	@sh ./scripts/protocgen.sh
+
 protoc:
 	@echo "Installing protoc compiler..."
 	@(cd /tmp; \
